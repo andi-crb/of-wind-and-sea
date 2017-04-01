@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 600px;
+        width: 600px;
+         padding: auto;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Of Wind and Sea</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var midPoint = {lat: -41.288611, lng:174.780684};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: midPoint,
+          styles: [
+    {
+        "stylers": [
+            {
+                "hue": "#2c3e50"
+            },
+            {
+                "saturation": 250
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 50
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+]
+        });
+
+        var marker = new google.maps.Marker({
+          position: midPoint,
+          icon: 'A.png',
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9NoaQ3XasL0H6d455tZQNEv1JCkAtQxg&callback=initMap">
+    </script>
+  </body>
+</html>
