@@ -3,8 +3,8 @@
   <head>
     <style>
        #map {
-        height: 600px;
-        width: 600px;
+        height: 800px;
+        width: 800px;
          padding: auto;
        }
     </style>
@@ -15,6 +15,7 @@
     <script>
       function initMap() {
         var midPoint = {lat: -41.288611, lng:174.780684};
+        var harbour = {lat: -41.281371, lng: 174.811708];
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
           center: midPoint,
